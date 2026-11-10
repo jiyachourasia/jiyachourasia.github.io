@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Jiya Chourasia — for Karya's Founder's Office</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ink:#0F0F0F;--ink2:#1A1A1A;--cream:#EEEAE3;--paper:#F6F3EE;--grid:#D9D3C8;--mute:#A9A399;--soft:#55524B;
+  --teal:#7DCFC8;--yellow:#F5D53A;--pink:#F07C8E;--orange:#F5A04E;--lime:#A8E06C;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;--sticker:"Archivo","Arial Black",sans-serif;--body:"Inter",system-ui,sans-serif;
+  color-scheme:dark light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ink);color:var(--cream);font:400 1rem/1.6 var(--body);
+  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
+p{margin:0}h1,h2,h3{margin:0;font-weight:400}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(1.1rem,5vw,4rem)}
+
+/* nav */
+nav.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.4rem}
+.logo{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.logo i{width:58px;height:28px;background:var(--cream);border-radius:4px 16px 16px 4px;display:block}
+.logo span{font:600 .9rem/1.15 var(--body)}
+.links{display:flex;gap:1.6rem;flex-wrap:wrap;align-items:center}
+.links a{font:500 .92rem var(--body);text-decoration:none;position:relative}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.links a:hover::after{transform:scaleX(1)}
+@media (max-width:760px){.links a:not(.keep){display:none}}
+
+/* hero */
+.who{display:flex;flex-wrap:wrap;gap:.5rem .9rem;align-items:center;margin-top:1.8rem;font:600 1rem var(--body)}
+.who b{font-weight:700;color:var(--cream)}
+.who span{font-weight:500;color:var(--ink);background:var(--yellow);padding:.15rem .55rem;border-radius:4px}
+h1{font:400 clamp(3.4rem,13vw,11rem)/.88 var(--display);text-transform:uppercase;margin:.7rem 0 1.4rem;white-space:nowrap}
+h1 span{display:inline-block;animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+h1 span:nth-child(2){animation-delay:.08s}
+@keyframes rise{from{transform:translateY(40%);opacity:0}}
+.intro-row{display:grid;grid-template-columns:1.1fr 1fr auto;gap:2.6rem;align-items:start;padding-bottom:1.6rem}
+.intro-row p{font-size:1.06rem;line-height:1.55;color:#E2DED6;max-width:31rem}
+.intro-row p mark{background:none;color:var(--cream);font-weight:600;box-shadow:inset 0 -.35em 0 #F5D53A66}
+.ctas{display:grid;gap:.7rem;justify-items:start}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;font:800 .95rem var(--sticker);text-transform:uppercase;letter-spacing:.03em;padding:.8rem 1.25rem;border-radius:999px;background:var(--lime);color:var(--ink);transition:transform .2s;white-space:nowrap}
+.btn:hover{transform:rotate(-3deg) scale(1.04)}
+.btn.alt{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 2px var(--cream)}
+.btn:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+.timeline{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;padding:1rem 0 2.2rem;border-top:1px solid #ffffff22;font:500 .92rem var(--body);color:#CFCAC1}
+.timeline b{color:var(--cream);font-weight:700}
+.timeline i{font-style:normal;color:var(--mute)}
+@media (max-width:900px){.intro-row{grid-template-columns:1fr;gap:1.2rem}.ctas{display:flex;flex-wrap:wrap}}
+@media (max-width:640px){h1{white-space:normal}h1 span{display:block}}
+
+/* stage: girl + stats */
+.stage{position:relative;background:var(--paper);color:var(--ink);margin-right:clamp(1rem,4vw,3rem);border-radius:0 260px 260px 0;overflow:hidden;
+  display:grid;grid-template-columns:minmax(260px,.85fr) 1.6fr;gap:1rem;align-items:end;padding:2rem clamp(2rem,7vw,6rem) 0 clamp(1rem,4vw,3rem);
+  background-image:linear-gradient(var(--grid) 1.2px,transparent 1.2px),linear-gradient(90deg,var(--grid) 1.2px,transparent 1.2px);background-size:56px 56px;background-position:-1px -1px}
+.girl-wrap{position:relative;width:min(330px,100%);justify-self:center;z-index:4}
+.stage{margin-bottom:clamp(2.5rem,6vw,4rem)}
+#girl{width:100%;height:auto;display:block;cursor:pointer;overflow:visible}
+#girl:focus{outline:none}#girl:focus-visible{outline:3px dashed var(--ink);outline-offset:4px}
+.bubble{position:absolute;left:58%;top:-2%;z-index:5;background:var(--ink);color:var(--cream);font:700 .95rem/1.25 var(--sticker);padding:.55rem .9rem;border-radius:18px 18px 18px 4px;width:max-content;max-width:14rem;transition:opacity .25s,transform .25s;transform-origin:bottom left}
+.bubble.off{opacity:0;transform:scale(.7) rotate(-6deg)}
+.hint{position:absolute;left:1.2rem;bottom:1rem;font:600 .72rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--soft);z-index:3}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;align-self:center;padding:1rem 0 2.4rem;position:relative;z-index:2}
+.stat{background:var(--c);border:2px solid var(--ink);border-radius:16px;padding:1rem 1.15rem 1.1rem;transform:rotate(var(--r));transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.stat:hover{transform:rotate(0) translateY(-3px)}
+.stat b{display:block;font:900 3rem/1 var(--sticker);font-stretch:78%;letter-spacing:-.01em}
+.stat span{display:block;font:500 .95rem/1.4 var(--body);margin-top:.35rem}
+.circle{position:absolute;left:1.2rem;top:1.2rem;width:132px;height:132px;border-radius:50%;background:var(--lime);display:grid;place-items:center;z-index:3;cursor:grab;touch-action:none;box-shadow:0 10px 18px -12px #0008;border:2px solid var(--ink)}
+.circle.drag{cursor:grabbing}
+.circle svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 18s linear infinite}
+.circle span{width:48px;height:48px;border-radius:50%;border:2.5px solid var(--ink);display:grid;place-items:center;font:900 1.3rem var(--sticker)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:900px){
+  .stage{grid-template-columns:1fr;border-radius:0 0 120px 120px;margin-right:0;padding:2.6rem 1rem 0}
+  .girl-wrap{order:2;width:min(300px,78vw)}
+  .stats{order:1;padding:0}
+  .circle{width:104px;height:104px;top:auto;left:auto;bottom:1.2rem;right:1rem}
+  .hint{display:none}
+}
+@media (max-width:460px){.stat b{font-size:2.3rem}.stat span{font-size:.86rem}.stats{gap:.7rem}}
+
+/* girl parts + moods */
+#girl .e,#girl .m,#girl .fx,#girl .g-arm{display:none}
+#girl[data-mood=happy] .e-happy,#girl[data-mood=happy] .m-laugh,
+#girl[data-mood=smile] .e-open,#girl[data-mood=smile] .m-smile,
+#girl[data-mood=wink] .e-wink,#girl[data-mood=wink] .m-grin,
+#girl[data-mood=wow] .e-wow,#girl[data-mood=wow] .m-o,#girl[data-mood=wow] .fx-spark,
+#girl[data-mood=think] .e-open,#girl[data-mood=think] .m-hmm,#girl[data-mood=think] .fx-think,
+#girl[data-mood=love] .e-happy,#girl[data-mood=love] .m-smile,#girl[data-mood=love] .fx-heart,
+#girl[data-mood=oops] .e-open,#girl[data-mood=oops] .m-hmm,#girl[data-mood=oops] .fx-sweat{display:inline}
+#girl.blink .e-open,#girl.blink .e-wink{display:none!important}
+#girl.blink[data-mood=smile] .e-blink,#girl.blink[data-mood=think] .e-blink,#girl.blink[data-mood=oops] .e-blink,#girl.blink[data-mood=wink] .e-blink{display:inline}
+#girl.waving .g-arm{display:inline}
+#girl .g-head{transform-origin:180px 330px;animation:bob 4.2s ease-in-out infinite}
+#girl .g-body{transform-origin:180px 430px;animation:breathe 4.2s ease-in-out infinite}
+#girl .g-arm{transform-origin:262px 372px;animation:wave .5s ease-in-out infinite alternate}
+#girl .bow{transform-origin:245px 128px;animation:bowj 4.2s ease-in-out infinite}
+#girl .pupils{transition:transform .12s}
+#girl .brows{transition:transform .2s}
+#girl[data-mood=wow] .brows{transform:translateY(-7px)}
+#girl[data-mood=think] .brows{transform:translateY(-3px) rotate(-2deg)}
+#girl.hop .g-head,#girl.hop .g-body{animation:hop .45s ease}
+#girl .fx{animation:float 1.6s ease-in-out infinite alternate}
+@keyframes bob{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg) translateY(2px)}}
+@keyframes breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.015)}}
+@keyframes wave{from{transform:rotate(-10deg)}to{transform:rotate(14deg)}}
+@keyframes bowj{0%,100%{transform:rotate(0)}50%{transform:rotate(8deg)}}
+@keyframes hop{40%{transform:translateY(-14px)}}
+@keyframes float{to{transform:translateY(-5px)}}
+
+/* sections */
+section{padding-block:clamp(3.2rem,7vw,5.2rem)}
+.cream{background:var(--paper);color:var(--ink);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px}
+.tagline{display:inline-flex;font:700 .74rem var(--sticker);letter-spacing:.1em;text-transform:uppercase;padding:.35rem .75rem;border-radius:999px;border:1.5px solid currentColor}
+h2{font:400 clamp(2.1rem,4.6vw,3.9rem)/.95 var(--display);text-transform:uppercase;margin:1rem 0 .9rem;max-width:52rem}
+h2 .hl{display:inline-block;background:var(--c,var(--yellow));color:var(--ink);padding:.03em .14em;transform:rotate(-1.2deg);border-radius:6px;margin-top:.1em}
+.lead{max-width:44rem;font-size:1.06rem;opacity:.85}
+
+/* role grid */
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin-top:2rem}
+.role{background:var(--ink);color:var(--cream);border-radius:20px;padding:1.4rem 1.4rem 1.2rem;display:grid;gap:.9rem;align-content:start;border-top:8px solid var(--c)}
+.role h3{justify-self:start;font:800 .95rem var(--sticker);text-transform:uppercase;letter-spacing:.03em;background:var(--c);color:var(--ink);padding:.35rem .8rem;border-radius:999px;transform:rotate(-2deg)}
+.role .lab{font:700 .7rem var(--sticker);letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.role .ask{font-size:.98rem;color:#CFCAC1;margin-top:.2rem}
+.role ul{margin:.3rem 0 0;padding:0;list-style:none;display:grid;gap:.5rem}
+.role li{padding-left:1.3rem;position:relative;font-size:.96rem;line-height:1.5;color:#ECE8E1}
+.role li::before{content:"";position:absolute;left:0;top:.5em;width:.6rem;height:.6rem;border-radius:50%;background:var(--c)}
+.role .note{background:var(--c);color:var(--ink);border-radius:12px;padding:.8rem 1rem;font-size:.94rem;font-weight:500}
+.role .note b{font:800 .74rem var(--sticker);text-transform:uppercase;letter-spacing:.05em;margin-right:.25rem}
+@media (max-width:820px){.roles{grid-template-columns:1fr}}
+
+/* pattern */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-top:2rem}
+.card{border-radius:18px;padding:1.3rem 1.25rem;display:grid;gap:.6rem;align-content:start;border:2px solid var(--ink);background:var(--c);transform:rotate(var(--r));transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.card:hover{transform:rotate(0) translateY(-4px)}
+.card .when{justify-self:start;font:800 .66rem var(--sticker);letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:.25rem .55rem;border-radius:999px}
+.card h3{font:400 1.7rem/1 var(--display);text-transform:uppercase}
+.card p{font-size:.95rem;line-height:1.55}
+.concl{margin-top:2.2rem;font:600 clamp(1.2rem,2.2vw,1.55rem)/1.4 var(--body);max-width:46rem}
+.concl span{background:var(--lime);padding:0 .15em;border-radius:4px}
+@media (max-width:820px){.cards{grid-template-columns:1fr}.card{transform:none}}
+
+/* month */
+.weeks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.wk{display:grid;gap:.7rem;align-content:start}
+.wk h3{font:400 1.8rem/1 var(--display);text-transform:uppercase;border-bottom:2px solid #ffffff2a;padding-bottom:.45rem}
+.item{all:unset;cursor:pointer;display:grid;gap:.45rem;background:var(--ink2);border:1.5px solid #ffffff22;border-radius:14px;padding:.95rem;color:var(--cream);transition:transform .2s,border-color .2s}
+.item small{transform:rotate(-2deg);justify-self:start;font:800 .68rem var(--sticker);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--c);padding:.2rem .5rem;border-radius:4px}
+.item strong{font:600 .98rem/1.35 var(--body)}
+.item .first{font-size:.86rem;line-height:1.45;color:#BDB8AF}
+.item .first b{color:var(--c);font-weight:600}
+.item .more{font:800 .7rem var(--sticker);text-transform:uppercase;letter-spacing:.06em;color:var(--c)}
+.item:hover{transform:translateY(-3px);border-color:var(--c)}
+.item[aria-expanded="true"]{border-color:var(--c);box-shadow:inset 0 0 0 2px var(--c)}
+.item:focus-visible{outline:3px solid var(--c);outline-offset:3px}
+@media (max-width:900px){.weeks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.weeks{grid-template-columns:1fr}}
+.foot{margin-top:1.2rem;font-size:.9rem;color:var(--mute)}
+.detail{margin-top:1.6rem;background:var(--paper);color:var(--ink);border-radius:20px;padding:clamp(1.3rem,4vw,2.2rem);display:grid;gap:1.3rem;border-top:10px solid var(--c)}
+.detail[hidden]{display:none}
+.d-head{display:flex;justify-content:space-between;gap:1rem;align-items:start}
+.d-head h3{font:400 clamp(1.6rem,3vw,2.3rem)/1 var(--display);text-transform:uppercase;margin-top:.45rem}
+.lab{font:800 .7rem var(--sticker);letter-spacing:.1em;text-transform:uppercase}
+.x{all:unset;cursor:pointer;font:800 .8rem var(--sticker);text-transform:uppercase;letter-spacing:.06em;border:2px solid var(--ink);border-radius:999px;padding:.4rem .8rem;flex:none}
+.x:hover{background:var(--ink);color:var(--paper)}
+.d-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:2rem}
+.d-grid>*{min-width:0}
+.detail ol{margin:.7rem 0 0;padding:0;list-style:none;counter-reset:n;display:grid;gap:.7rem}
+.detail ol li{counter-increment:n;padding-left:2.4rem;position:relative}
+.detail ol li::before{content:counter(n);position:absolute;left:0;top:-.1rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:800 .8rem var(--sticker)}
+.prior{margin-top:1.2rem;background:var(--c);border-radius:14px;padding:1rem 1.1rem}
+.prior .lab{display:block;margin-bottom:.3rem}
+.form{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:1.1rem;display:grid;gap:.6rem;align-content:start}
+.form dl{margin:0;display:grid;gap:.55rem}
+.form dt{font:800 .66rem var(--sticker);letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.form dd{margin:0;border-bottom:1px dashed var(--grid);padding-bottom:.35rem;font-size:.93rem}
+.slides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem;counter-reset:s}
+.slides div{border:1.5px solid var(--ink);border-radius:6px;padding:.35rem .5rem;font-size:.84rem;counter-increment:s}
+.slides div::before{content:counter(s,decimal-leading-zero) " ";font:800 .7rem var(--sticker);color:#C2364C}
+@media (max-width:760px){.d-grid{grid-template-columns:1fr}}
+
+/* off the clock + toolkit */
+.off{display:grid;gap:2.4rem;margin-top:1.8rem}
+.off>*{min-width:0}
+.hobby{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.1rem 1.4rem}
+.hobby div{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr;gap:.2rem .7rem;align-items:start;align-content:start}
+.hobby i{grid-row:span 2;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--c)}
+.hobby svg{width:24px;height:24px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hobby b{font:800 .9rem var(--sticker);text-transform:uppercase;letter-spacing:.03em}
+.hobby span{color:var(--soft);font-size:.9rem;line-height:1.45}
+.wall{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1rem;padding-bottom:.6rem}
+.wall button{all:unset;cursor:zoom-in;background:#fff;padding:6px;border-radius:6px;border:1.5px solid var(--ink);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.wall button:nth-child(odd){transform:rotate(-2.5deg)}.wall button:nth-child(even){transform:rotate(2deg) translateY(10px)}.wall button:nth-child(3n){transform:rotate(1deg) translateY(-4px)}
+.wall button:hover{transform:rotate(0) scale(1.05)}
+.wall button:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.wall img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:2px}
+.kit{margin-top:2.6rem;padding-top:1.8rem;border-top:1.5px dashed var(--grid);display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) ;gap:1.4rem}
+.kit h3{font:800 .78rem var(--sticker);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem;color:var(--soft)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tags span{font:800 .8rem var(--sticker);text-transform:uppercase;padding:.35rem .7rem;border-radius:999px;border:2px solid var(--ink);background:var(--c)}
+.made{grid-column:1/-1;font-size:.95rem;color:var(--soft)}
+@media (max-width:960px){.hobby{grid-template-columns:repeat(2,minmax(0,1fr))}.wall{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.kit{grid-template-columns:1fr}}
+@media (max-width:560px){.hobby{grid-template-columns:1fr}.wall{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:.6rem .2rem 1.2rem}.wall button{flex:0 0 42%;scroll-snap-align:center}}
+.lightbox{position:fixed;inset:0;z-index:60;background:#000d;display:grid;place-items:center;padding:1.2rem}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:min(92vw,720px);max-height:84vh;border:10px solid var(--paper);border-radius:6px}
+.lightbox button{all:unset;cursor:pointer;position:absolute;top:1rem;right:1.2rem;font:800 .85rem var(--sticker);text-transform:uppercase;color:var(--ink);background:var(--yellow);padding:.45rem .8rem;border-radius:999px}
+
+/* contact */
+.talk h2{font-size:clamp(3.2rem,11vw,8.5rem);line-height:.86;margin-bottom:1.4rem}
+.talk-row{display:flex;flex-wrap:wrap;gap:1.4rem 3rem;align-items:center;justify-content:space-between}
+.talk p{color:#D7D2C9;font-size:1.08rem}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.addr{margin-top:1.8rem;font:500 .92rem var(--body);color:var(--mute)}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <nav class="top" aria-label="Main">
+    <a class="logo" href="#top" aria-label="Jiya Chourasia, top of page"><i></i><span>Jiya<br>Chourasia</span></a>
+    <div class="links"><a href="#role">The role</a><a href="#why">Why Karya</a><a href="#month">The month</a><a href="assets/Jiya-Chourasia-Resume.pdf" target="_blank" rel="noopener" class="keep">Resume ↗</a><a href="#contact" class="keep">Contact</a></div>
+  </nav>
+  <p id="top" class="who"><b>Jiya Chourasia</b><span>for Karya · Associate, Founder's Office</span></p>
+  <h1 aria-label="Founder's Office"><span>Founder's</span> <span>Office</span></h1>
+  <div class="intro-row">
+    <p>I keep founders' work moving: the <mark>research before a decision</mark>, the email after a meeting, and the system that stops a thread from falling through the cracks.</p>
+    <p>I want to build a business of my own one day, and the only way I know to learn that is to <mark>do every function at least once.</mark> A founder's office is where all of them meet.</p>
+    <div class="ctas"><a class="btn" href="#contact" id="cta">Get in touch →</a><a class="btn alt" href="assets/Jiya-Chourasia-Resume.pdf" target="_blank" rel="noopener">Resume ↗</a></div>
+  </div>
+  <p class="timeline"><span><b>Tap Capital</b> · Sales intern → Special Projects Associate <i>· Aug 2025 – Aug 2026</i></span><span><b>CHRIST University</b> · BBA <i>· 2025</i></span><span><i>Bengaluru, from Bhopal</i></span></p>
+</header>
+
+<div class="stage" id="stage">
+  <div class="girl-wrap">
+    <div class="bubble off" id="bubble" aria-live="polite"></div>
+    <svg id="girl" data-mood="happy" viewBox="0 0 360 406" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Doodle of Jiya">
+  <g fill="none" stroke="#141414" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- body -->
+    <g transform="translate(0 -24)"><g class="g-body">
+      <path d="M64 432C70 372 112 340 180 338C248 340 290 372 296 432Z" fill="#fff"/>
+      <path d="M128 342C140 372 160 386 180 392C200 386 220 372 232 342" fill="#fff"/>
+      <path d="M128 342C118 360 116 378 122 396M232 342C242 360 244 378 238 396"/>
+      <path d="M150 352l-10 26M210 352l10 26" stroke-width="2"/>
+      <path d="M180 392l4.4 9 9.6 1.2-7 6.6 1.8 9.6-8.8-4.6-8.8 4.6 1.8-9.6-7-6.6 9.6-1.2z" fill="#fff" stroke-width="2.6"/>
+      <path d="M96 400c6 6 14 8 22 6M264 400c-6 6-14 8-22 6" stroke-width="2"/>
+    </g>
+    <!-- waving arm -->
+    <g class="g-arm">
+      <path d="M262 372C286 360 300 334 300 300" fill="none"/>
+      <path d="M286 300c-8-6-8-20 2-26 2-10 12-12 16-4 6-6 16-2 14 8 8 2 8 14 0 18-4 10-20 12-32 4Z" fill="#fff"/>
+      <path d="M276 262l-6-8M288 254l-2-10M300 254l4-9" stroke-width="2.4"/>
+    </g>
+    </g>
+    <!-- head -->
+    <g class="g-head">
+      <!-- back hair -->
+      <path class="hair-back" d="M96 168C84 240 86 318 106 372C122 360 134 350 142 336L218 336C226 350 238 360 254 372C274 318 276 240 264 168C256 104 222 70 180 70C138 70 104 104 96 168Z" fill="#fff"/>
+      <path d="M104 230c-4 40 0 80 12 118M256 230c4 40 0 80-12 118M112 260c0 30 4 56 12 76M248 260c0 30-4 56-12 76" stroke-width="2.2"/>
+      <!-- neck -->
+      <path d="M166 286v30M194 286v30"/>
+      <!-- ears -->
+      <path d="M117 204c-14-4-18 22 0 26M243 204c14-4 18 22 0 26" fill="#fff"/>
+      <!-- face -->
+      <path d="M114 184C114 120 246 120 246 184C246 250 222 290 180 290C138 290 114 250 114 184Z" fill="#fff"/>
+      <!-- bangs -->
+      <path d="M112 176C106 112 140 82 180 82C220 82 254 112 248 176C242 160 236 150 228 144C226 160 218 170 206 176C204 160 198 148 190 142C188 158 180 168 168 174C168 158 162 146 154 142C150 156 140 168 126 174C124 160 120 150 114 146Z" fill="#fff"/>
+      <path d="M150 110c-6 12-8 22-6 32M196 104c4 12 4 24 0 36M226 120c4 8 4 16 2 24" stroke-width="2"/>
+      <!-- headband -->
+      <path d="M112 142C126 94 234 94 248 142" stroke-width="9"/>
+      <!-- bow -->
+      <g class="bow">
+        <path d="M244 124c10-16 28-12 24 2-2 8-12 10-24 4Z" fill="#fff"/>
+        <path d="M244 128c14 2 24 12 16 22-6 6-14 0-16-10Z" fill="#fff"/>
+        <circle cx="245" cy="128" r="4" fill="#141414"/>
+        <path d="M250 112l6-4M262 116l6-2" stroke-width="2"/>
+      </g>
+      <g transform="translate(0 6)"><!-- brows -->
+      <g class="brows" stroke-width="3"><path d="M146 166q10-6 20 0"/><path d="M194 166q10-6 20 0"/></g>
+      <!-- eyes -->
+      <g class="e e-open"><g class="pupils"><ellipse cx="156" cy="194" rx="10" ry="12" fill="#141414" stroke="none"/><ellipse cx="204" cy="194" rx="10" ry="12" fill="#141414" stroke="none"/><circle cx="152" cy="189" r="3.4" fill="#fff" stroke="none"/><circle cx="200" cy="189" r="3.4" fill="#fff" stroke="none"/><circle cx="159" cy="199" r="1.6" fill="#fff" stroke="none"/><circle cx="207" cy="199" r="1.6" fill="#fff" stroke="none"/></g></g>
+      <g class="e e-happy"><path d="M144 198Q156 182 168 198"/><path d="M192 198Q204 182 216 198"/></g>
+      <g class="e e-blink"><path d="M145 195q11 4 22 0"/><path d="M193 195q11 4 22 0"/></g>
+      <g class="e e-wink"><ellipse cx="156" cy="194" rx="10" ry="12" fill="#141414" stroke="none"/><circle cx="152" cy="189" r="3.4" fill="#fff" stroke="none"/><path d="M192 196Q204 184 216 196"/><path d="M216 190l6-4M217 197l7 0" stroke-width="2.2"/></g>
+      <g class="e e-wow"><circle cx="156" cy="194" r="9" fill="#fff"/><circle cx="156" cy="194" r="4.5" fill="#141414" stroke="none"/><circle cx="204" cy="194" r="9" fill="#fff"/><circle cx="204" cy="194" r="4.5" fill="#141414" stroke="none"/></g>
+      <!-- blush -->
+      <g class="blush" stroke="#E8506A" stroke-width="2.2"><path d="M134 222l6-8M141 224l6-8M148 226l6-8"/><path d="M206 226l6-8M213 224l6-8M220 222l6-8"/></g>
+      <!-- mouths -->
+      <g class="m m-laugh"><path d="M161 230Q180 262 199 230Z" fill="#141414"/><path d="M170 246Q180 238 190 246Q180 254 170 246Z" fill="#E8506A" stroke="none"/></g>
+      <g class="m m-smile"><path d="M168 234Q180 244 192 234"/></g>
+      <g class="m m-grin"><path d="M162 230Q180 250 198 230Q180 238 162 230Z" fill="#141414"/></g>
+      <g class="m m-o"><ellipse cx="180" cy="238" rx="6" ry="8" fill="#141414"/></g>
+      <g class="m m-hmm"><path d="M172 238q8-4 16 1"/></g></g>
+    </g>
+    <!-- effects -->
+    <g class="fx fx-spark" stroke-width="3"><path d="M78 120v20M68 130h20M290 92v16M282 100h16M300 196v12M294 202h12"/></g>
+    <g class="fx fx-think" fill="#fff"><circle cx="270" cy="96" r="5"/><circle cx="286" cy="76" r="8"/><path d="M292 52c0-14 26-14 26 0 12 0 12 20 0 20-4 10-22 10-26 0-12 0-12-20 0-20Z"/></g>
+    <g class="fx fx-heart" fill="#E8506A" stroke="#141414"><path d="M284 100c-8-12 6-22 12-12 6-10 20 0 12 12l-12 12Z"/><path d="M62 150c-6-9 4-16 9-9 5-7 15 0 9 9l-9 9Z"/></g>
+    <g class="fx fx-sweat" fill="#9ED8F0"><path d="M252 150c6 10 8 16 4 20-4 4-10 0-8-6Z"/></g>
+  </g>
+</svg>
+  </div>
+  <div class="stats" aria-label="At a glance">
+    <div class="stat" style="--c:var(--teal);--r:-1.5deg"><b>20+</b><span>banks and NBFCs mapped into one lender recommendation engine</span></div>
+    <div class="stat" style="--c:var(--yellow);--r:1.2deg"><b>150+</b><span>SME financing cases evaluated</span></div>
+    <div class="stat" style="--c:var(--pink);--r:1deg"><b>₹10L</b><span>cross-sell revenue month, from a partner channel that started with two people</span></div>
+    <div class="stat" style="--c:var(--orange);--r:-1deg"><b>200+</b><span>classmates I represented as placement rep at CHRIST University</span></div>
+  </div>
+  <div class="circle" id="circle" aria-label="the work that has no owner yet"><svg viewBox="0 0 132 132" aria-hidden="true"><defs><path id="circ" d="M66 66m-48 0a48 48 0 1 1 96 0a48 48 0 1 1-96 0"/></defs><text font-family="Archivo, sans-serif" font-weight="900" font-size="11.5" fill="#0F0F0F"><textPath href="#circ" textLength="300" lengthAdjust="spacing">THE WORK THAT HAS NO OWNER YET ✱</textPath></text></svg><span>✱</span></div>
+  <p class="hint">poke her</p>
+</div>
+
+<main>
+  <!-- role -->
+  <section class="cream" id="role" aria-labelledby="role-h">
+    <div class="wrap">
+      <span class="tagline">the role, as I read it</span>
+      <h2 id="role-h">Four kinds of work, and <span class="hl" style="--c:var(--yellow)">where I've already done them</span></h2>
+      <p class="lead">Each card puts what Karya asks for next to what I've actually done.</p>
+      <div class="roles" id="roles"></div>
+    </div>
+  </section>
+
+  <!-- why -->
+  <section id="why" aria-labelledby="pat-h">
+    <div class="wrap">
+      <span class="tagline">why Karya · connecting the dots</span>
+      <h2 id="pat-h">A pattern <span class="hl" style="--c:var(--pink)">I noticed</span></h2>
+      <p class="lead">I won't claim I've followed Karya for years. But when I laid my last four years out on one page, the same thread ran through all of them.</p>
+      <div class="cards" style="color:var(--ink)">
+        <div class="card" style="--c:var(--teal);--r:-1.2deg"><span class="when">college research</span><h3>Women entrepreneurs &amp; microfinance</h3><p>A group study in Bangalore. We interviewed women running small businesses about what microfinance actually changed for them, and what still held them back.</p></div>
+        <div class="card" style="--c:var(--yellow);--r:1deg"><span class="when">2024 – 25 · placement cell</span><h3>Getting a whole class hired</h3><p>I ran PwC's hiring process end to end, helped run a Deloitte drive that hired around 200 students, and helped 40+ classmates through their processes. I didn't get placed myself. A friend from the placement cell referred me to my first job.</p></div>
+        <div class="card" style="--c:var(--pink);--r:-.6deg"><span class="when">2025 – 26 · Tap Capital</span><h3>Small businesses banks overlook</h3><p>I joined as a sales intern and became Special Projects Associate. I assessed 150+ SMEs and built the systems that matched them to lenders who would actually say yes.</p></div>
+      </div>
+      <p class="concl">Karya follows the same thread into the <span style="color:var(--ink)">digital economy</span>, bringing people in through paid, dignified work in their own languages. I'd like to help run the place that does that.</p>
+    </div>
+  </section>
+
+  <!-- month -->
+  <section id="month" aria-labelledby="month-h" style="border-top:1px solid #ffffff1c">
+    <div class="wrap">
+      <span class="tagline">a month in the founder's office</span>
+      <h2 id="month-h">Your example month, <span class="hl" style="--c:var(--teal)">planned the way I'd plan it</span></h2>
+      <p class="lead">This is the typical month from the job post, laid out week by week. Each entry shows my first step; open it for the full plan, the closest thing I've done before, and a blank format I'd use.</p>
+      <div class="weeks" id="weeks"></div>
+      <p class="foot">* the formats are empty on purpose. I haven't seen any Karya data yet.</p>
+      <div class="detail" id="detail" hidden tabindex="-1"></div>
+    </div>
+  </section>
+
+  <!-- off the clock + toolkit -->
+  <section class="cream" id="off" aria-labelledby="off-h">
+    <div class="wrap">
+      <span class="tagline">off the clock</span>
+      <h2 id="off-h">Where I go when I'm <span class="hl" style="--c:var(--lime)">not working</span></h2>
+      <div class="off">
+        <div class="hobby">
+          <div><i style="--c:var(--teal)"><svg viewBox="0 0 40 40"><path d="M4 16c4-3 8-3 12 0s8 3 12 0 6-2 8-1M4 24c4-3 8-3 12 0s8 3 12 0 6-2 8-1M4 32c4-3 8-3 12 0s8 3 12 0 6-2 8-1"/><circle cx="27" cy="9" r="3"/></svg></i><b>swimming</b><span>The one place I can't check my phone. Most good ideas show up around the tenth lap.</span></div>
+          <div><i style="--c:var(--yellow)"><svg viewBox="0 0 40 40"><path d="M20 10c-4-3-10-3-15-1v23c5-2 11-2 15 1 4-3 10-3 15-1V9c-5-2-11-2-15 1zM20 10v23"/></svg></i><b>reading</b><span>Always a book on the go. Ask what I'm reading and you'll get a longer answer than you wanted.</span></div>
+          <div><i style="--c:var(--pink)"><svg viewBox="0 0 40 40"><path d="M30 5l5 5-15 15-5-5zM15 20c-4 0-7 3-7 7 0 3-2 5-4 6 6 1 13-1 14-6"/></svg></i><b>painting</b><span>Slow, messy, and nobody's KPI. A few pieces are below.</span></div>
+          <div><i style="--c:var(--orange)"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="9.5"/><circle cx="20" cy="20" r="4"/></svg></i><b>rabbit holes</b><span>One question, forty tabs later. It's market research if you squint.</span></div>
+        </div>
+        <div class="wall" aria-label="Some of my paintings and sketches">
+          <button data-src="assets/art-flowers.jpg" aria-label="Open painting: portrait with flowers over the eyes"><img src="assets/art-flowers.jpg" alt="" loading="lazy" style="object-position:50% 48%"></button>
+          <button data-src="assets/art-wave.jpg" aria-label="Open painting: a breaking wave"><img src="assets/art-wave.jpg" alt="" loading="lazy" style="object-position:40% 50%"></button>
+          <button data-src="assets/art-dog2.jpg" aria-label="Open painting: a golden dog peeking up"><img src="assets/art-dog2.jpg" alt="" loading="lazy" style="object-position:50% 78%"></button>
+          <button data-src="assets/art-map.jpg" aria-label="Open painting: a woman among map-like shapes in watercolour"><img src="assets/art-map.jpg" alt="" loading="lazy" style="object-position:50% 45%"></button>
+          <button data-src="assets/art-hummingbird.jpg" aria-label="Open painting: a woman in profile with a hummingbird"><img src="assets/art-hummingbird.jpg" alt="" loading="lazy" style="object-position:55% 45%"></button>
+          <button data-src="assets/art-stems.jpg" aria-label="Open painting: white flowers on tall stems against yellow"><img src="assets/art-stems.jpg" alt="" loading="lazy" style="object-position:50% 70%"></button>
+        </div>
+      </div>
+      <div class="kit" aria-label="Toolkit">
+        <div><h3>thinking &amp; writing</h3><div class="tags" style="--c:var(--teal)"><span>Claude</span><span>ChatGPT</span><span>Wispr Flow</span><span>Notion</span></div></div>
+        <div><h3>numbers &amp; tracking</h3><div class="tags" style="--c:var(--yellow)"><span>Excel</span><span>Google Sheets</span><span>Google Workspace</span></div></div>
+        <div><h3>making things look good</h3><div class="tags" style="--c:var(--pink)"><span>Figma</span><span>Canva</span><span>Emergent</span></div></div>
+        <p class="made">I made this page myself, with AI tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section class="talk" id="contact" aria-labelledby="c-h">
+    <div class="wrap">
+      <h2 id="c-h">Let's talk.</h2>
+      <div class="talk-row">
+        <p>Based in Bengaluru and available to start immediately.</p>
+        <div class="btns">
+          <button class="btn" id="copy">copy my email</button>
+          <a class="btn alt" href="https://www.linkedin.com/in/jiya-chourasia" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn alt" href="assets/Jiya-Chourasia-Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+        </div>
+      </div>
+      <p class="addr">jiyachourasia04@gmail.com · +91 62686 19015 · — Jiya</p>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Painting"><button id="lbx" aria-label="Close">close ✕</button><img id="lbimg" alt=""></div>
+
+<script>
+(function(){
+  /* fit the headline */
+  const h1=document.querySelector('h1');
+  function fit(){h1.style.fontSize='';const avail=h1.clientWidth;let size=parseFloat(getComputedStyle(h1).fontSize);
+    for(let k=0;k<3;k++){const block=getComputedStyle(h1.children[0]).display==='block';
+      const w=block?Math.max(...[...h1.children].map(s=>s.getBoundingClientRect().width)):h1.scrollWidth;
+      if(!w)break;size=size*avail/w*0.995;h1.style.fontSize=size+'px';}}
+  fit();addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit);
+
+  /* ---------- the girl ---------- */
+  const g=document.getElementById('girl'),bubble=document.getElementById('bubble'),pupils=g.querySelector('.pupils');
+  let bt,mt;
+  function mood(m,ms){g.dataset.mood=m;clearTimeout(mt);if(ms)mt=setTimeout(()=>{g.dataset.mood='smile'},ms)}
+  function say(s,ms=3600){bubble.textContent=s;bubble.classList.remove('off');clearTimeout(bt);bt=setTimeout(()=>bubble.classList.add('off'),ms)}
+  function hop(){g.classList.remove('hop');void g.getBBox();g.classList.add('hop')}
+  function wave(ms=2600){g.classList.add('waving');setTimeout(()=>g.classList.remove('waving'),ms)}
+  const h=new Date().getHours();
+  setTimeout(()=>{mood('happy',3200);wave();say(h<12?"good morning! hi, I'm Jiya":h<17?"hi! I'm Jiya, welcome in":"hi! I'm Jiya, working late too?")},500);
+  (function blink(){setTimeout(()=>{g.classList.add('blink');setTimeout(()=>g.classList.remove('blink'),140);blink()},2200+Math.random()*2800)})();
+  addEventListener('pointermove',e=>{const r=g.getBoundingClientRect();const cx=r.left+r.width*.5,cy=r.top+r.height*.45;
+    const a=Math.atan2(e.clientY-cy,e.clientX-cx),d=Math.min(1,Math.hypot(e.clientX-cx,e.clientY-cy)/300);
+    pupils.style.transform=`translate(${Math.cos(a)*4.5*d}px,${Math.sin(a)*4*d}px)`});
+  const pokes=[['wink',"hehe, that tickles"],['wow',"okay okay, I'm awake"],['smile',"theek hai, you have my attention"],['think',"one question, forty tabs later…"],['happy',"my best ideas come around the tenth lap"],['love',"still here? I like you already"],['oops',"I paint when I need to think slowly"],['happy',"thanks for stopping by :)"]];
+  let pi=0;
+  function poke(){const [m,s]=pokes[pi++%pokes.length];mood(m,3400);say(s);hop()}
+  g.addEventListener('click',poke);
+  g.setAttribute('tabindex','0');g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();poke()}});
+  let idle;function resetIdle(){clearTimeout(idle);idle=setTimeout(()=>{if(g.dataset.mood==='smile'){mood('think',4000);say("one question, forty tabs later…")}},12000)}
+  ['pointermove','scroll','keydown'].forEach(ev=>addEventListener(ev,resetIdle,{passive:true}));resetIdle();
+  document.getElementById('cta').addEventListener('pointerenter',()=>{mood('love',2600);say("yes please, say hi!",2600)});
+  document.querySelectorAll('.stat').forEach(s=>s.addEventListener('pointerenter',()=>{if(g.dataset.mood==='smile')mood('wow',1400)}));
+  /* draggable circle sticker */
+  const st=document.getElementById('circle'),stage=document.getElementById('stage');
+  if(!matchMedia('(max-width:900px)').matches){
+    let sx,sy,ox,oy,moved=false;
+    st.addEventListener('pointerdown',e=>{st.setPointerCapture(e.pointerId);st.classList.add('drag');sx=e.clientX;sy=e.clientY;ox=st.offsetLeft;oy=st.offsetTop;moved=false;mood('wow')});
+    st.addEventListener('pointermove',e=>{if(!st.classList.contains('drag'))return;const dx=e.clientX-sx,dy=e.clientY-sy;if(Math.abs(dx)+Math.abs(dy)>3)moved=true;
+      st.style.right='auto';st.style.left=Math.max(0,Math.min(stage.clientWidth-st.offsetWidth,ox+dx))+'px';st.style.top=Math.max(0,Math.min(stage.clientHeight-st.offsetHeight,oy+dy))+'px'});
+    const end=()=>{if(!st.classList.contains('drag'))return;st.classList.remove('drag');if(moved){mood('happy',2000);say("ooh, nice spot",1800)}else mood('smile')};
+    st.addEventListener('pointerup',end);st.addEventListener('pointercancel',end);
+  }
+
+  /* ---------- role cards ---------- */
+  const roles=[
+    {name:'founder support',c:'#F5D53A',
+     ask:"Own the CEO's calendar, build pre-reads and briefing notes before key meetings, and polish the decks and documents the founders need.",
+     did:["Owned founder projects with no clear owner: lender partnerships, quick-commerce financing, vendor evaluation, process design.","Kept founders, credit, ops and partners in sync across parallel projects.","Prepared pre-reads, briefing notes and decks for key founder meetings.","Researched 12+ NBFC and supply-chain finance platforms to inform founder decisions."],
+     note:"<b>what carries over:</b> knowing what a founder needs to walk into a room with, and handing it over on one page."},
+    {name:'fundraising',c:'#F07C8E',
+     ask:"Strategic donor research and mapping, and leading donor reporting by pulling material from project teams into donor-ready documents.",
+     did:["Reached out to VC firms for funding through the founders' and senior leadership's LinkedIn, and set up meetings once they replied.","Mapped the underwriting policies, eligibility rules and product-fit criteria of 20+ banks and NBFCs. In practice: who funds what, on what terms, and how good a fit we are.","Supported lender, FLDG and DSA partnership work, which meant chasing internal teams for numbers and turning them into something a partner could act on."],
+     note:"<b>what carries over:</b> I've already found funders, reached out and lined up meetings. Donor reporting would be new, but pulling numbers from many teams into one document is what I did for lenders."},
+    {name:'storytelling & sales',c:'#7DCFC8',
+     ask:"Draft collateral, outreach emails and client pre-reads, make basic edits in Figma or Canva, and publish content independently.",
+     did:["Tested every outreach channel as a sales intern: cold calls, cold email, LinkedIn, exhibitions, founder meets. Organic outreach gave me 2 conversions per 100–200 people, so I helped build a DSA channel instead.","Reached 150+ companies a month in partnerships outreach, and supported the cross-sell push behind a ₹10 lakh month.","Made class presentations and extracurricular posters in Figma and Canva through college, and built this page myself."],
+     note:"<b>what carries over:</b> I write the email that moves a thread forward, and I don't wait for design to publish."},
+    {name:'operational rigour',c:'#A8E06C',
+     ask:"Lead a cross-team effort to build documentation, SOPs and internal systems, and own Karya's institutional memory.",
+     did:["Built a rules-based lender recommendation engine that replaced manual lender matching and sped up deal evaluation.","Wrote SOPs and designed tracking and management reporting for sales and cross-sell pipelines, case evaluations, outreach KPIs and monthly target reviews."],
+     note:"<b>what carries over:</b> turning what lives in people's heads into a process anyone can follow and anyone can check."}
+  ];
+  document.getElementById('roles').innerHTML=roles.map(r=>`<article class="role" style="--c:${r.c}"><h3>${r.name}</h3>
+    <div><span class="lab">Karya asks for</span><p class="ask">${r.ask}</p></div>
+    <div><span class="lab">I've done</span><ul>${r.did.map(d=>`<li>${d}</li>`).join('')}</ul></div>
+    <p class="note">${r.note}</p></article>`).join('');
+
+  /* ---------- month ---------- */
+  const C={ops:'#A8E06C',fund:'#F07C8E',story:'#7DCFC8',ceo:'#F5D53A'};
+  const weeks=[
+    {w:'week 1',items:[
+      {id:'priority',k:'ops',tag:'org priority',title:'Lead a cross-team effort on a critical org priority',
+       steps:["Write a one-paragraph brief: what 'done' looks like, who decides, and by when. Get a founder to sign it off.","Meet one person from each team that touches it for 20 minutes, to learn how it works today.","Write the current process down, gaps included, and share it before proposing anything.","Agree on one owner per step, then run a shared tracker with a 15-minute weekly check-in until it sticks."],
+       prior:"At Tap Capital I documented how lender matching really worked across credit and ops. That became a rules-based engine and SOPs the team could use without me.",
+       form:['tracker',[['Step','what happens, in one line'],['Owner','one name, not a team'],['Status','not started / in progress / blocked / done'],['Blocked by','a person or a decision'],['Last updated','date']]]},
+      {id:'calendar',k:'ceo',tag:"CEO's office",title:"Protect the CEO's calendar through outreach season",
+       steps:["Ask the CEO which things this month must move forward, and block time for those first.","Sort incoming requests against those priorities, and draft a polite 'not this month' note for the rest.","Send a short Friday note: next week's meetings, what's prepped for each, and what still needs him."],
+       prior:"I coordinated between founders, credit, ops and partners on several projects at once. Most of that was keeping track of who needed whom, and by when.",
+       form:['friday note',[['Next week','meetings, in order of importance'],['Prepped','pre-reads ready, with links'],['Needs you','decisions or calls only you can make'],['Parked','what we said "not this month" to']]]}
+    ]},
+    {w:'week 2',items:[
+      {id:'preread',k:'fund',tag:'fundraising',title:'Pre-reads for a week of funder meetings',
+       steps:["List the week's meetings, then pull each funder's focus areas, past grants and anything they've said publicly.","Check Karya's history with them (past calls, asks, reports sent) so a founder never repeats or forgets something.","Write a one-page brief per meeting, with the ask in the first line.","Debrief within 24 hours: what was said, what we promised, the next step. Log it all in the relationship tracker."],
+       prior:"I researched 12+ platforms for our founders, and read the financials behind 150+ financing cases to condense each into a decision.",
+       form:['one-page funder brief',[['The ask','one sentence: amount, what for, by when'],["Who's in the room",'names, roles, one line each'],['What they fund','focus areas, typical grant size, sources'],['History with us','last contact, promises, what was sent'],['Watch-outs','likely questions and honest answers']]]}
+    ]},
+    {w:'week 3',items:[
+      {id:'visit',k:'ops',tag:'events',title:'Organise a site visit for a donor',
+       steps:["Agree with the Chief of Staff on what the donor should understand by the end of the day.","Check with the field team and the community first. The day should suit the people hosting it, not just the guest.","Send a run-of-show three days out: travel, timings, people, language support, and a plan B.","Within a day, send a thank-you note with what they saw and the next step."],
+       prior:"I ran PwC's campus hiring process end to end and helped run a Deloitte drive that hired around 200 students. Many moving parts, one fixed date.",
+       form:['run-of-show',[['Purpose','what the donor should leave knowing'],['Hosts','field lead, community contact, consent confirmed'],['Timeline','pickup → site → conversations → debrief → drop'],['Language','who translates, and when'],['Plan B','weather, delays, a cancelled session']]]}
+    ]},
+    {w:'week 4',items:[
+      {id:'deck',k:'story',tag:'storytelling',title:"Turn a founder's rough notes into a ten-slide deck",
+       steps:["Ask who it's for and what they should do after seeing it. That decides everything else.","Write the ten headlines as full sentences first, so the story reads from the headlines alone.","Give each slide one point and one piece of proof, and send a draft back the same day.","Keep a version log so the latest numbers and wording are always easy to find."],
+       prior:"I turned FLDG pipelines, case evaluations and outreach numbers into monthly management reports founders could read in minutes, and made decks and posters in Figma and Canva all through college.",
+       slides:['The problem, in one line','Who it affects','What Karya does','How the work happens','Proof: what changed','Who we work with',"What's next",'The ask','How we report back','Thank you + contact']},
+      {id:'onepager',k:'story',tag:'client / donor',title:"A one-pager on Karya's work in health",
+       steps:["Collect what exists: project reports, client feedback, the people involved. Ask the project team what not to claim.","Write it for one reader, a health-focused client or donor, and lead with what they care about.","Keep every number traceable to its source, and get the project lead's sign-off before it goes out."],
+       prior:"My research projects (FDI trends, microfinance, student investing) each meant turning a lot of material into a few clear findings.",
+       form:['one-pager',[['Headline','the outcome, not the activity'],['The gap','why health AI needs this data'],['What we did','languages, scale, partners'],['Proof','1–2 sourced numbers, signed off'],['Next','the conversation we want to have']]]}
+    ]}
+  ];
+  const wkEl=document.getElementById('weeks'),detail=document.getElementById('detail');const all={};let open=null;
+  weeks.forEach(wk=>{const col=document.createElement('div');col.className='wk';col.innerHTML=`<h3>${wk.w}</h3>`;
+    wk.items.forEach(it=>{all[it.id]=it;const b=document.createElement('button');b.className='item';b.style.setProperty('--c',C[it.k]);
+      b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls','detail');b.dataset.id=it.id;
+      b.innerHTML=`<small>${it.tag}</small><strong>${it.title}</strong><span class="first"><b>First step:</b> ${it.steps[0]}</span><span class="more">see full plan →</span>`;b.onclick=()=>toggle(it.id);col.appendChild(b)});
+    wkEl.appendChild(col)});
+  function toggle(id){
+    if(open===id){close();return}
+    open=id;const it=all[id];detail.style.setProperty('--c',C[it.k]);
+    wkEl.querySelectorAll('.item').forEach(e=>{const on=e.dataset.id===id;e.setAttribute('aria-expanded',on);e.querySelector('.more').textContent=on?'close plan ×':'see full plan →'});
+    const side=it.slides?`<div class="form"><span class="lab">blank format · ten headlines</span><div class="slides">${it.slides.map(s=>`<div>${s}</div>`).join('')}</div></div>`
+      :`<div class="form"><span class="lab">blank format · ${it.form[0]}</span><dl>${it.form[1].map(r=>`<div><dt>${r[0]}</dt><dd>${r[1]}</dd></div>`).join('')}</dl></div>`;
+    detail.innerHTML=`<div class="d-head"><div><span class="lab">${it.tag}</span><h3>${it.title}</h3></div><button class="x" id="dx">close ✕</button></div>
+      <div class="d-grid"><div><span class="lab">how I'd start</span><ol>${it.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+      <div class="prior"><span class="lab">closest thing I've done</span>${it.prior}</div></div>${side}</div>`;
+    detail.hidden=false;document.getElementById('dx').onclick=close;detail.focus({preventScroll:true});
+    const r=detail.getBoundingClientRect();if(r.top>innerHeight*.7||r.top<0)detail.scrollIntoView({block:'start'});
+  }
+  function close(){const was=open;open=null;detail.hidden=true;wkEl.querySelectorAll('.item').forEach(e=>{e.setAttribute('aria-expanded','false');e.querySelector('.more').textContent='see full plan →'});const b=wkEl.querySelector(`[data-id="${was}"]`);if(b)b.focus()}
+
+  /* ---------- lightbox ---------- */
+  const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');let lastBtn=null;
+  document.querySelectorAll('.wall button').forEach(b=>b.onclick=()=>{lastBtn=b;lbimg.src=b.dataset.src;lbimg.alt=b.getAttribute('aria-label').replace('Open ','');lb.hidden=false;document.getElementById('lbx').focus()});
+  function lbClose(){lb.hidden=true;if(lastBtn)lastBtn.focus()}
+  document.getElementById('lbx').onclick=lbClose;lb.onclick=e=>{if(e.target===lb)lbClose()};
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!lb.hidden)lbClose();else if(open)close()}});
+
+  /* ---------- copy ---------- */
+  const cp=document.getElementById('copy');
+  cp.onclick=async()=>{try{await navigator.clipboard.writeText('jiyachourasia04@gmail.com');cp.textContent='copied ✓'}catch(_){cp.textContent='jiyachourasia04@gmail.com'}setTimeout(()=>cp.textContent='copy my email',2200)};
+})();
+</script>
+</body>
+</html>
