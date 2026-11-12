@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field notes on LunyBee — Jiya Chourasia</title>
+<meta name="description" content="Jiya Chourasia — notes for the Founder's Office role at LunyBee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4EDDF; --paper-2:#EDE3D0; --ink:#1E1A15; --ink-soft:#5A5046;
+    --tomato:#D9432B; --cobalt:#2747B8; --green:#5F7F4E; --butter:#F1D06B; --rule:#CDBFA6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;font-size:19px;line-height:1.6;
+    background-image:radial-gradient(rgba(30,26,21,.035) 1px, transparent 1px);background-size:4px 4px;
+  }
+  a{color:var(--cobalt)}
+  .wrap{max-width:880px;margin:0 auto;padding:0 28px}
+  .mono{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+
+  .strip{border-bottom:1.5px solid var(--ink);padding:14px 0}
+  .strip .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .strip span{color:var(--ink-soft)}
+
+  header.hero{padding:72px 0 44px;position:relative}
+  .kicker{color:var(--tomato);margin-bottom:18px;display:block}
+  h1{font-family:"Fraunces",serif;font-weight:800;font-size:clamp(44px,8vw,84px);line-height:.98;letter-spacing:-.02em}
+  h1 em{font-style:italic;font-weight:400;color:var(--cobalt)}
+  .lede{max-width:600px;margin-top:28px;font-size:21px}
+  .lede strong{font-weight:500;background:linear-gradient(transparent 60%, var(--butter) 60%)}
+  .sticker{
+    position:absolute;right:28px;top:84px;background:var(--butter);padding:14px 16px;width:200px;
+    transform:rotate(4deg);font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.5;
+    box-shadow:2px 3px 0 var(--ink);border:1.5px solid var(--ink);
+  }
+  .sticker b{display:block;font-weight:500;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase}
+
+  section{padding:58px 0;border-top:1.5px dashed var(--rule)}
+  .note-head{display:flex;align-items:baseline;gap:16px;margin-bottom:22px}
+  .num{font-family:"Fraunces",serif;font-weight:800;font-size:15px;width:38px;height:38px;flex:none;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;transform:translateY(-4px)}
+  h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(28px,4.4vw,40px);line-height:1.1;letter-spacing:-.01em}
+  h2 em{font-style:italic;font-weight:400}
+  p + p{margin-top:14px}
+  .aside{font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.55;color:var(--ink-soft);border-left:3px solid var(--tomato);padding:4px 0 4px 14px;margin-top:24px;max-width:640px}
+
+  /* group map */
+  .group{margin-top:30px;border:1.5px solid var(--ink)}
+  .group-top{padding:14px 18px;border-bottom:1.5px solid var(--ink);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--paper-2)}
+  .group-top b{font-family:"Fraunces",serif;font-size:22px;font-weight:600}
+  .units{display:grid;grid-template-columns:repeat(4,1fr)}
+  .unit{padding:18px 16px 20px;border-right:1.5px solid var(--ink)}
+  .unit:last-child{border-right:none}
+  .unit .tag{display:inline-block;padding:2px 7px;color:#fff}
+  .unit h3{font-family:"Fraunces",serif;font-size:22px;font-weight:600;margin:8px 0 4px;line-height:1.15}
+  .unit .role{font-style:italic;color:var(--ink-soft);font-size:16px;margin-bottom:10px}
+  .unit ul{list-style:none;font-size:15.5px;line-height:1.45}
+  .unit li{padding:6px 0;border-top:1px solid var(--rule)}
+  .t1{background:var(--green)} .t2{background:var(--cobalt)} .t3{background:var(--tomato)} .t4{background:var(--ink)}
+  .front{border-top:1.5px solid var(--ink);padding:18px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--butter)}
+  .front b{font-family:"Fraunces",serif;font-size:26px;font-weight:800}
+  .front p{font-size:17px;margin:0}
+
+  /* loop */
+  .loop{display:grid;grid-template-columns:310px 1fr;gap:36px;align-items:center;margin-top:30px}
+  .loop svg{width:100%;height:auto}
+  .loop ol{list-style:none;counter-reset:l}
+  .loop li{counter-increment:l;padding:10px 0 10px 40px;position:relative;border-bottom:1px solid var(--rule);font-size:18px}
+  .loop li::before{content:counter(l);position:absolute;left:0;top:10px;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--tomato)}
+
+  /* bags */
+  .bags{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .bag{border:1.5px solid var(--ink);background:#fffaf0;padding:12px 14px 10px;width:150px;transform:rotate(var(--r,0deg));box-shadow:2px 2px 0 var(--ink)}
+  .bag .who{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+  .bag .what{font-family:"Fraunces",serif;font-size:17px;line-height:1.2;margin-top:6px}
+  .bag .from{font-family:"IBM Plex Mono",monospace;font-size:10.5px;margin-top:10px;padding-top:6px;border-top:1px dashed var(--rule);color:var(--tomato)}
+
+  /* asks table */
+  .asks{margin-top:26px;border-top:1.5px solid var(--ink)}
+  .ask{display:grid;grid-template-columns:150px 1fr 1fr;gap:22px;padding:15px 0;border-bottom:1px solid var(--rule);font-size:17px}
+  .ask .who{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+  .ask-head{color:var(--ink-soft)}
+  .ask-head div{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+
+  /* plan */
+  .plan{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ink)}
+  .plan > div{padding:20px 20px 4px 0}
+  .plan > div + div{padding-left:20px;border-left:1.5px dashed var(--rule)}
+  .plan .when{font-family:"Fraunces",serif;font-style:italic;font-size:30px;color:var(--cobalt);line-height:1}
+  .plan h3{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;margin:10px 0 12px}
+  .plan ul{padding-left:18px;font-size:17px}
+  .plan li{margin-bottom:8px}
+
+  /* proof */
+  .proof{margin-top:24px}
+  .proof-row{display:grid;grid-template-columns:1fr 1.25fr;gap:28px;padding:18px 0;border-bottom:1px solid var(--rule)}
+  .proof-row:first-child{border-top:1.5px solid var(--ink)}
+  .proof-row .did{font-size:17.5px}
+  .proof-row .here{font-style:italic;color:var(--ink-soft);font-size:17.5px}
+  .proof-row .here::before{content:"→ at LunyBee: ";font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+  .proof-head{display:grid;grid-template-columns:1fr 1.25fr;gap:28px;color:var(--ink-soft);margin-bottom:8px}
+
+  /* noticed */
+  .notes{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;margin-top:24px;align-items:start}
+  .noticed{background:#fff8e6;border:1.5px solid var(--ink);padding:20px 22px;font-size:17.5px}
+  .noticed.a{transform:rotate(-.6deg);box-shadow:3px 4px 0 var(--tomato)}
+  .noticed.b{transform:rotate(.8deg);box-shadow:3px 4px 0 var(--cobalt);margin-top:18px}
+  .noticed code{font-family:"IBM Plex Mono",monospace;background:var(--butter);padding:1px 6px;font-size:14px}
+  .noticed .label{display:block;margin-bottom:8px;color:var(--ink-soft)}
+
+  footer{border-top:1.5px solid var(--ink);padding:48px 0 70px;margin-top:20px}
+  footer h2{margin-bottom:14px}
+  .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+  .btn{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);padding:11px 16px;background:var(--paper);box-shadow:2px 2px 0 var(--ink);transition:transform .12s, box-shadow .12s}
+  .btn:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink)}
+  .btn.primary{background:var(--tomato);color:#fff}
+  .sign{font-family:"Fraunces",serif;font-style:italic;font-size:26px;margin-top:34px}
+  .sources{margin-top:40px;font-size:14px;color:var(--ink-soft)}
+  .sources summary{cursor:pointer;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  .sources ul{margin-top:10px;padding-left:18px}
+
+  @media (max-width:760px){
+    body{font-size:18px}
+    .sticker{position:static;transform:rotate(2deg);margin-top:30px;width:auto;max-width:270px}
+    header.hero{padding-top:48px}
+    .units{grid-template-columns:1fr 1fr}
+    .unit:nth-child(2){border-right:none}
+    .unit:nth-child(1),.unit:nth-child(2){border-bottom:1.5px solid var(--ink)}
+    .front{grid-template-columns:1fr;gap:6px}
+    .loop{grid-template-columns:1fr}
+    .loop svg{max-width:290px;margin:0 auto;display:block}
+    .bag{width:calc(50% - 6px)}
+    .ask{grid-template-columns:1fr;gap:4px}
+    .ask-head{display:none}
+    .plan{grid-template-columns:1fr}
+    .plan > div + div{padding-left:0;border-left:none;border-top:1.5px dashed var(--rule)}
+    .proof-row,.proof-head{grid-template-columns:1fr;gap:6px}
+    .proof-head div:last-child{display:none}
+    .notes{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="strip mono">
+  <div class="wrap">
+    <span>Field notes · No. 03</span>
+    <span>For Chandini D P · Founder's Office, LunyBee</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="mono kicker">Jiya Chourasia — Bangalore</span>
+    <h1>So much<br><em>coffee</em>,<br>so little time.</h1>
+    <p class="lede">
+      I started with LunyBee's website and ended up following the four logos under "Our Portfolio": Harley Estate, HPRI,
+      Golden Wood and Classic Coffees. What I found was a family business that has been building in layers since 1864,
+      and <strong>LunyBee looks like the layer that ties it all together</strong>. These are my notes.
+    </p>
+    <div class="sticker">
+      <b>Read this in 4 min</b>
+      01 · The group, as I understand it<br>
+      02 · The loop between them<br>
+      03 · Where a founder's office fits<br>
+      04 · My first 90 days<br>
+      05 · What I've done before<br>
+      06 · One small thing
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="map">
+  <div class="wrap">
+    <div class="note-head"><span class="num">01</span><h2>The group, <em>as I understand it</em></h2></div>
+    <p>Each of the four businesses does one clear job. LunyBee seems to be what makes the expertise behind them available to people outside the family.</p>
+
+    <div class="group">
+      <div class="group-top"><b>Classic Group</b><span class="mono">Five generations · Sakleshpur &amp; Chikmagalur</span></div>
+      <div class="units">
+        <div class="unit">
+          <span class="mono tag t1">The land</span>
+          <h3>Harley Estate</h3>
+          <div class="role">grows it</div>
+          <ul>
+            <li>Sakleshpur, est. 1864</li>
+            <li>Shade-grown in the Western Ghats</li>
+            <li>Arabica and Robusta, plus pepper, areca, cardamom and cocoa</li>
+          </ul>
+        </div>
+        <div class="unit">
+          <span class="mono tag t2">The lab</span>
+          <h3>HPRI</h3>
+          <div class="role">figures it out</div>
+          <ul>
+            <li>Described as Asia's first private coffee processing research institute</li>
+            <li>50+ processing methods developed</li>
+            <li>Pichia yeast, wet plum and other fermentations</li>
+          </ul>
+        </div>
+        <div class="unit">
+          <span class="mono tag t3">The stay</span>
+          <h3>Golden Wood</h3>
+          <div class="role">lets people see it</div>
+          <ul>
+            <li>Eight rooms inside the estate</li>
+            <li>Solar and hydel power, no TV or wifi</li>
+            <li>Estate walks, coffee tours, cupping sessions</li>
+          </ul>
+        </div>
+        <div class="unit">
+          <span class="mono tag t4">The shelf</span>
+          <h3>Classic Coffees</h3>
+          <div class="role">sells it</div>
+          <ul>
+            <li>Own retail brands since 2010</li>
+            <li>Gourmet stores, airports, online</li>
+            <li>A founder member of SCAI</li>
+          </ul>
+        </div>
+      </div>
+      <div class="front">
+        <b>LunyBee</b>
+        <p>The expertise, available to everyone else: consulting, processing R&amp;D, education, judging, coffee travel and brewing gear. In effect, the front door to everything above.</p>
+      </div>
+    </div>
+    <p class="aside">Put together from public interviews, travel write-ups and roaster pages, so some of it may be old or slightly off. I'd like to hear where.</p>
+  </div>
+</section>
+
+<section id="loop">
+  <div class="wrap">
+    <div class="note-head"><span class="num">02</span><h2>The loop <em>between them</em></h2></div>
+    <p>The thing I found most interesting: many of India's well-known specialty roasters print Harley's name on their bags. That means the estate's story reaches drinkers through other people's shelves.</p>
+
+    <div class="bags">
+      <div class="bag" style="--r:-2deg"><div class="who">Blue Tokai</div><div class="what">Pichia fermentation, plus a Producer Series lot</div><div class="from">Harley Estate</div></div>
+      <div class="bag" style="--r:1.5deg"><div class="who">Naivo</div><div class="what">Pichia yeast naturals, Kaapi Royale robusta</div><div class="from">Harley Estate</div></div>
+      <div class="bag" style="--r:-1deg"><div class="who">Bloom</div><div class="what">SL9 naturals, Vienna roast</div><div class="from">Harley Estate</div></div>
+      <div class="bag" style="--r:2deg"><div class="who">Darkwoods</div><div class="what">A partner since its early days</div><div class="from">Harley Estate</div></div>
+      <div class="bag" style="--r:-1.5deg"><div class="who">Cafés</div><div class="what">e.g. a nitrogen-maceration pour-over in Pune</div><div class="from">Harley Estate</div></div>
+    </div>
+
+    <div class="loop">
+      <svg viewBox="0 0 310 310" aria-label="A loop: estate, lab, roasters, visitors, back to the estate">
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E1A15"/></marker></defs>
+        <circle cx="155" cy="155" r="100" fill="none" stroke="#CDBFA6" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <path d="M 203 67 A 100 100 0 0 1 244 110" fill="none" stroke="#1E1A15" stroke-width="1.8" marker-end="url(#ar)"/>
+        <path d="M 244 200 A 100 100 0 0 1 201 243" fill="none" stroke="#1E1A15" stroke-width="1.8" marker-end="url(#ar)"/>
+        <path d="M 108 243 A 100 100 0 0 1 66 200" fill="none" stroke="#1E1A15" stroke-width="1.8" marker-end="url(#ar)"/>
+        <path d="M 66 110 A 100 100 0 0 1 108 67" fill="none" stroke="#1E1A15" stroke-width="1.8" marker-end="url(#ar)"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1" text-anchor="middle">
+          <rect x="111" y="40" width="88" height="26" fill="#5F7F4E"/><text x="155" y="57" fill="#fff">ESTATE</text>
+          <rect x="228" y="142" width="76" height="26" fill="#2747B8"/><text x="266" y="159" fill="#fff">HPRI</text>
+          <rect x="111" y="244" width="88" height="26" fill="#1E1A15"/><text x="155" y="261" fill="#fff">ROASTERS</text>
+          <rect x="4" y="142" width="80" height="26" fill="#D9432B"/><text x="44" y="159" fill="#fff">VISITORS</text>
+        </g>
+        <text x="155" y="150" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="19" fill="#1E1A15">LunyBee</text>
+        <text x="155" y="172" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="16" fill="#5A5046">in the middle</text>
+      </svg>
+      <ol>
+        <li>The <b>estate</b> grows the coffee.</li>
+        <li><b>HPRI</b> turns it into lots that score high and taste unusual.</li>
+        <li><b>Roasters</b> put the name on the bag and carry the story to drinkers and cafés.</li>
+        <li>Some of those people want to <b>come closer</b>: as a Golden Wood guest, a café client, a student or a producer asking how it's done.</li>
+        <li>That's the point where <b>LunyBee</b> can take them in, and every one of them strengthens the estate's name for the next harvest.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <div class="note-head"><span class="num">03</span><h2>Where a <em>founder's office</em> fits</h2></div>
+    <p>Five names means five kinds of people asking for your time, often in the same week. My guess at what that looks like, and where I could help:</p>
+
+    <div class="asks">
+      <div class="ask ask-head"><div>Who's asking</div><div>What they want</div><div>What I'd take off your plate</div></div>
+      <div class="ask"><span class="who" style="color:var(--green)">Roasters</span><div>Samples, lot details, harvest timing, the story for their bag</div><div>A partner tracker: who bought what, when to follow up, what's coming next season</div></div>
+      <div class="ask"><span class="who" style="color:var(--cobalt)">Producers</span><div>"How did you do that ferment?" Processing advice and training</div><div>Turning enquiries into scoped proposals, and keeping a clear list of what HPRI can teach</div></div>
+      <div class="ask"><span class="who" style="color:var(--tomato)">Cafés</span><div>Consulting on menus, sourcing, setup and quality</div><div>Intake, scoping, timelines and follow-ups, so you only spend time on the actual coffee</div></div>
+      <div class="ask"><span class="who" style="color:var(--tomato)">Travellers</span><div>A stay, a tour, a cupping, a programme</div><div>Packaging Golden Wood stays and LunyBee programmes together, and keeping bookings and partners in sync</div></div>
+      <div class="ask"><span class="who">Buyers</span><div>Coffee and gear, in stores and online</div><div>Keeping track of retail partners and launches across Classic Coffees and LunyBee</div></div>
+    </div>
+    <p style="margin-top:24px">None of this replaces your expertise. The point is that nothing slips while you're in the lab, at a competition table or with guests on the estate.</p>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="wrap">
+    <div class="note-head"><span class="num">04</span><h2>My first <em>90 days</em></h2></div>
+    <p>A starting plan. I'd expect to change it after the first week.</p>
+    <div class="plan">
+      <div>
+        <span class="when">Days 1–30</span>
+        <h3>Learn the whole group</h3>
+        <ul>
+          <li>Time on the estate, in the HPRI lab and at Golden Wood</li>
+          <li>Map every incoming request across the five names: who it's from, how it arrives, where it waits</li>
+          <li>Write down the real year, harvest to harvest</li>
+        </ul>
+      </div>
+      <div>
+        <span class="when">Days 31–60</span>
+        <h3>Build the basics</h3>
+        <ul>
+          <li>One tracker for roasters, cafés, producers and programmes</li>
+          <li>A short briefing note before each of your important meetings</li>
+          <li>Proposals, follow-ups and scheduling handled end to end</li>
+        </ul>
+      </div>
+      <div>
+        <span class="when">Days 61–90</span>
+        <h3>Own one project</h3>
+        <ul>
+          <li>e.g. a "visit the estate on your bag" programme with roaster partners, linking their customers to Golden Wood and LunyBee</li>
+          <li>Or whichever project you most want moved</li>
+          <li>Report back with numbers, not just updates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="wrap">
+    <div class="note-head"><span class="num">05</span><h2>What I've <em>done before</em></h2></div>
+    <p>About a year at Tap Capital, working across partnerships, revenue, operations and special projects with the founders.</p>
+    <div class="proof">
+      <div class="proof-head mono"><div>What I did</div><div>Where it'd be useful</div></div>
+      <div class="proof-row">
+        <div class="did">Built pre-reads, briefing notes and decks for the founders.</div>
+        <div class="here">walking into a roaster, café or panel meeting already briefed.</div>
+      </div>
+      <div class="proof-row">
+        <div class="did">Ran VC fundraising outreach through the founders' and senior leadership's LinkedIn, and set up the meetings.</div>
+        <div class="here">outreach in your voice to roasters, cafés and travel partners, without it eating your week.</div>
+      </div>
+      <div class="proof-row">
+        <div class="did">Turned lender eligibility criteria into a structured recommendation process, and evaluated SME finance cases.</div>
+        <div class="here">turning "it depends" calls into a clear process, like which consulting enquiries to take on.</div>
+      </div>
+      <div class="proof-row">
+        <div class="did">Supported partnerships and built operational processes.</div>
+        <div class="here">the systems five businesses need so they don't run on memory.</div>
+      </div>
+      <div class="proof-row">
+        <div class="did">Before that, I worked on my college placement cell, helping students through recruitment. I also designed presentations and posters in Figma and Canva.</div>
+        <div class="here">coordinating lots of people at once, and making things look good enough to share.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="noticed">
+  <div class="wrap">
+    <div class="note-head"><span class="num">06</span><h2>One <em>small</em> thing</h2></div>
+    <p>I tend to notice small things. While I was reading lunybee.com:</p>
+    <div class="noticed a" style="max-width:640px;margin-top:24px">
+      The footer says <code>© 2035</code>. It's probably meant to be 2026. Sharing it in case it's useful to whoever manages the site.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>I'd like to <em>talk</em>.</h2>
+    <div class="links">
+      <a class="btn primary" href="mailto:jiyachourasia53@gmail.com">Email me</a>
+      <a class="btn" href="Jiya-Chourasia-Resume.pdf">Resume (PDF)</a>
+      <a class="btn" href="https://www.linkedin.com/in/jiya-chourasia/">LinkedIn</a>
+    </div>
+    <p class="sign">— Jiya</p>
+
+    <details class="sources">
+      <summary>Where these notes come from</summary>
+      <ul>
+        <li><a href="https://www.lunybee.com/">lunybee.com</a></li>
+        <li><a href="https://www.goldenwood.in/explore">Golden Wood: Explore</a></li>
+        <li><a href="https://www.womenentrepreneursreview.com/leader/chandini-purnesh-carrying-forward-a-family-legacy-with-business-acumen-tact-vid-930.html">Women Entrepreneurs Review interview</a></li>
+        <li><a href="https://bluetokaicoffee.com/blogs/blue-tokai-coffee-roasters/producer-series-lot-10">Blue Tokai: Producer Series, Harley Estate</a></li>
+        <li><a href="https://kodagufirst.in/?p=37324">Kodagu First: Fourth wave in a coffee cup</a></li>
+        <li><a href="https://bwhotelier.com/article/classic-coffee-premium-range-121156">BW Hotelier: Classic Coffee Premium Range</a></li>
+        <li><a href="https://www.outlooktraveller.com/stay/karnataka-smell-the-coffee-at-harley-estate">Outlook Traveller: Golden Wood</a></li>
+      </ul>
+    </details>
+  </div>
+</footer>
+
+</body>
+</html>
