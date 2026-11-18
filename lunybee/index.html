@@ -99,11 +99,17 @@
   /* proof */
   .proof{margin-top:24px}
   .proof-row{display:grid;grid-template-columns:1fr 1.25fr;gap:28px;padding:18px 0;border-bottom:1px solid var(--rule)}
-  .proof-row:first-child{border-top:1.5px solid var(--ink)}
+  .proof-group + .proof-row{border-top:1px solid var(--rule)}
   .proof-row .did{font-size:17.5px}
   .proof-row .here{font-style:italic;color:var(--ink-soft);font-size:17.5px}
   .proof-row .here::before{content:"→ at LunyBee: ";font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
   .proof-head{display:grid;grid-template-columns:1fr 1.25fr;gap:28px;color:var(--ink-soft);margin-bottom:8px}
+
+  .proof-group{padding:22px 0 8px;color:var(--tomato);border-top:1.5px solid var(--ink)}
+  .opp{margin-top:34px;border:1.5px solid var(--ink);background:#fffaf0;padding:22px 24px;box-shadow:3px 4px 0 var(--green)}
+  .opp .label{display:block;color:var(--green);margin-bottom:10px}
+  .opp ul{margin:14px 0;padding-left:20px;font-size:17.5px}
+  .opp li{margin-bottom:8px}
 
   /* noticed */
   .notes{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;margin-top:24px;align-items:start}
@@ -160,11 +166,12 @@
     <h1>So much<br><em>coffee</em>,<br>so little time.</h1>
     <p class="lede">
       I started with LunyBee's website and ended up following the four logos under "Our Portfolio": Harley Estate, HPRI,
-      Golden Wood and Classic Coffees. What I found was a family business that has been building in layers since 1864,
-      and <strong>LunyBee looks like the layer that ties it all together</strong>. These are my notes.
+      Golden Wood and Classic Coffees. What I found was a family coffee business that has been building since 1864.
+      <strong>LunyBee appears to bring together expertise across coffee sourcing, processing, research, education and hospitality.</strong>
+      These are my notes on how the pieces create value, and where better coordination, financial visibility and business development could help.
     </p>
     <div class="sticker">
-      <b>Read this in 4 min</b>
+      <b>Read this in 5 min</b>
       01 · The group, as I understand it<br>
       02 · The loop between them<br>
       03 · Where a founder's office fits<br>
@@ -180,7 +187,7 @@
 <section id="map">
   <div class="wrap">
     <div class="note-head"><span class="num">01</span><h2>The group, <em>as I understand it</em></h2></div>
-    <p>Each of the four businesses does one clear job. LunyBee seems to be what makes the expertise behind them available to people outside the family.</p>
+    <p>Each of the four portfolio businesses seems to do one clear job. This is my reading from public sources, not a confirmed picture of how they're owned or run.</p>
 
     <div class="group">
       <div class="group-top"><b>Classic Group</b><span class="mono">Five generations · Sakleshpur &amp; Chikmagalur</span></div>
@@ -228,10 +235,10 @@
       </div>
       <div class="front">
         <b>LunyBee</b>
-        <p>The expertise, available to everyone else: consulting, processing R&amp;D, education, judging, coffee travel and brewing gear. In effect, the front door to everything above.</p>
+        <p>Sources, develops, markets and distributes coffee and coffee equipment across domestic and international markets, working across trading, import and export, partnerships and sales.</p>
       </div>
     </div>
-    <p class="aside">Put together from public interviews, travel write-ups and roaster pages, so some of it may be old or slightly off. I'd like to hear where.</p>
+    <p class="aside">These links are my interpretation, put together from public interviews, travel write-ups and roaster pages. They aren't confirmed legal or ownership structures, and some details may be old. I'd like to hear where I've got it wrong.</p>
   </div>
 </section>
 
@@ -270,8 +277,19 @@
         <li><b>HPRI</b> turns it into lots that score high and taste unusual.</li>
         <li><b>Roasters</b> put the name on the bag and carry the story to drinkers and cafés.</li>
         <li>Some of those people want to <b>come closer</b>: as a Golden Wood guest, a café client, a student or a producer asking how it's done.</li>
-        <li>That's the point where <b>LunyBee</b> can take them in, and every one of them strengthens the estate's name for the next harvest.</li>
+        <li>That's the point where <b>LunyBee</b> could take them in, which in turn could strengthen the estate's name for the next harvest.</li>
       </ol>
+    </div>
+
+    <div class="opp">
+      <span class="mono label">Where there could be an opportunity · my hypotheses</span>
+      <p>When roasters put an estate's name on their bags, it may work as a form of recognition in the market. I don't know how much it influences buying decisions, but I think it's worth testing.</p>
+      <ul>
+        <li><b>Possibly warmer conversations with new buyers.</b> Existing roaster relationships could help when approaching importers or distributors abroad, if those buyers already know the name or value that track record.</li>
+        <li><b>Possibly more than one sale per relationship.</b> Some roasters who buy green coffee might also be interested in equipment, training or a sourcing visit. I'd want to check how often that actually happens.</li>
+        <li><b>Clearer view of margins.</b> Tracking which lots, channels and markets perform best could help focus time where returns are higher. Whether margins improve would depend on what the data shows.</li>
+      </ul>
+      <p>These are questions I'd want to test with real data in the first few months, not conclusions.</p>
     </div>
   </div>
 </section>
@@ -279,7 +297,7 @@
 <section id="fit">
   <div class="wrap">
     <div class="note-head"><span class="num">03</span><h2>Where a <em>founder's office</em> fits</h2></div>
-    <p>Five names means five kinds of people asking for your time, often in the same week. My guess at what that looks like, and where I could help:</p>
+    <p>Coffee and equipment, at home and abroad, means many kinds of people asking for your time, often in the same week. My guess at what that looks like, and where I could help:</p>
 
     <div class="asks">
       <div class="ask ask-head"><div>Who's asking</div><div>What they want</div><div>What I'd take off your plate</div></div>
@@ -287,7 +305,11 @@
       <div class="ask"><span class="who" style="color:var(--cobalt)">Producers</span><div>"How did you do that ferment?" Processing advice and training</div><div>Turning enquiries into scoped proposals, and keeping a clear list of what HPRI can teach</div></div>
       <div class="ask"><span class="who" style="color:var(--tomato)">Cafés</span><div>Consulting on menus, sourcing, setup and quality</div><div>Intake, scoping, timelines and follow-ups, so you only spend time on the actual coffee</div></div>
       <div class="ask"><span class="who" style="color:var(--tomato)">Travellers</span><div>A stay, a tour, a cupping, a programme</div><div>Packaging Golden Wood stays and LunyBee programmes together, and keeping bookings and partners in sync</div></div>
-      <div class="ask"><span class="who">Buyers</span><div>Coffee and gear, in stores and online</div><div>Keeping track of retail partners and launches across Classic Coffees and LunyBee</div></div>
+      <div class="ask"><span class="who" style="color:var(--cobalt)">International buyers</span><div>Samples, pricing, certifications, shipment timelines</div><div>Following up on enquiries, preparing offers and keeping every conversation in one pipeline</div></div>
+      <div class="ask"><span class="who" style="color:var(--green)">Distributors</span><div>Terms, margins, marketing support, reliable supply</div><div>Tracking partner performance and preparing for review conversations</div></div>
+      <div class="ask"><span class="who">Equipment suppliers</span><div>Orders, specifications, payments, delivery dates</div><div>Tracking procurement from order to arrival, including landed cost</div></div>
+      <div class="ask"><span class="who" style="color:var(--tomato)">Trade coordination</span><div>Customs, certificates, food-safety and shipping documents</div><div>A checklist for every shipment so nothing is missed at the port</div></div>
+      <div class="ask"><span class="who">Retail buyers</span><div>Coffee and gear, in stores and online</div><div>Keeping track of retail partners, launches and campaign results</div></div>
     </div>
     <p style="margin-top:24px">None of this replaces your expertise. The point is that nothing slips while you're in the lab, at a competition table or with guests on the estate.</p>
   </div>
@@ -300,29 +322,32 @@
     <div class="plan">
       <div>
         <span class="when">Days 1–30</span>
-        <h3>Learn the whole group</h3>
+        <h3>Understand the business</h3>
         <ul>
-          <li>Time on the estate, in the HPRI lab and at Golden Wood</li>
-          <li>Map every incoming request across the five names: who it's from, how it arrives, where it waits</li>
-          <li>Write down the real year, harvest to harvest</li>
+          <li>Understand the coffee and equipment product portfolio</li>
+          <li>Map existing suppliers, buyers and distributors</li>
+          <li>Understand import-export workflows and documentation</li>
+          <li>Review existing business performance and reporting</li>
         </ul>
       </div>
       <div>
         <span class="when">Days 31–60</span>
-        <h3>Build the basics</h3>
+        <h3>Build the systems</h3>
         <ul>
-          <li>One tracker for roasters, cafés, producers and programmes</li>
-          <li>A short briefing note before each of your important meetings</li>
-          <li>Proposals, follow-ups and scheduling handled end to end</li>
+          <li>Create supplier and customer trackers</li>
+          <li>Establish a business development pipeline</li>
+          <li>Track procurement, sales and operational costs</li>
+          <li>Improve meeting briefs, follow-ups and reporting</li>
         </ul>
       </div>
       <div>
         <span class="when">Days 61–90</span>
-        <h3>Own one project</h3>
+        <h3>Own an initiative</h3>
         <ul>
-          <li>e.g. a "visit the estate on your bag" programme with roaster partners, linking their customers to Golden Wood and LunyBee</li>
-          <li>Or whichever project you most want moved</li>
-          <li>Report back with numbers, not just updates</li>
+          <li>Research one potential international market</li>
+          <li>Identify prospective buyers or distribution partners</li>
+          <li>Evaluate commercial feasibility and margins</li>
+          <li>Present a structured business development proposal</li>
         </ul>
       </div>
     </div>
@@ -335,13 +360,23 @@
     <p>About a year at Tap Capital, working across partnerships, revenue, operations and special projects with the founders.</p>
     <div class="proof">
       <div class="proof-head mono"><div>What I did</div><div>Where it'd be useful</div></div>
+      <div class="proof-group mono">Financial operations &amp; analysis</div>
+      <div class="proof-row">
+        <div class="did">Managed departmental P&amp;L for the FLDG business, tracking revenue, costs, exposure, defaults, claims, payouts and monthly reconciliations. Conducted profitability and variance analysis and prepared management reports.</div>
+        <div class="here">supporting P&amp;L monitoring by region, tracking KPIs and preparing reports.</div>
+      </div>
+      <div class="proof-row">
+        <div class="did">Worked closely with credit teams to analyse company financial statements, including balance sheets, income statements, cash flows, GST returns and bank statements, to assess financial health and business performance.</div>
+        <div class="here">checking new distributors and buyers before extending terms, and turning numbers into business intelligence for decisions.</div>
+      </div>
+      <div class="proof-group mono">Founder support &amp; partnerships</div>
       <div class="proof-row">
         <div class="did">Built pre-reads, briefing notes and decks for the founders.</div>
-        <div class="here">walking into a roaster, café or panel meeting already briefed.</div>
+        <div class="here">walking into a buyer, partner or board meeting already briefed, with action items tracked afterwards.</div>
       </div>
       <div class="proof-row">
         <div class="did">Ran VC fundraising outreach through the founders' and senior leadership's LinkedIn, and set up the meetings.</div>
-        <div class="here">outreach in your voice to roasters, cafés and travel partners, without it eating your week.</div>
+        <div class="here">outreach in your voice to buyers, distributors and partners, without it eating your week.</div>
       </div>
       <div class="proof-row">
         <div class="did">Turned lender eligibility criteria into a structured recommendation process, and evaluated SME finance cases.</div>
@@ -349,7 +384,7 @@
       </div>
       <div class="proof-row">
         <div class="did">Supported partnerships and built operational processes.</div>
-        <div class="here">the systems five businesses need so they don't run on memory.</div>
+        <div class="here">the trackers and processes trade operations need so they don't run on memory.</div>
       </div>
       <div class="proof-row">
         <div class="did">Before that, I worked on my college placement cell, helping students through recruitment. I also designed presentations and posters in Figma and Canva.</div>
@@ -374,6 +409,7 @@
 <footer>
   <div class="wrap">
     <h2>I'd like to <em>talk</em>.</h2>
+    <p style="max-width:640px">I didn't put this together just to apply for a job. I wanted to understand how LunyBee's businesses create value, and where better coordination, financial visibility and business development could help it grow.</p>
     <div class="links">
       <a class="btn primary" href="mailto:jiyachourasia04@gmail.com">Email me</a>
       <a class="btn" href="Jiya-Chourasia-Resume.pdf">Resume (PDF)</a>
